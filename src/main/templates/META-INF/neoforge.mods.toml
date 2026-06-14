@@ -36,7 +36,7 @@ displayName="${mod_name}" #mandatory
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
+logoFile="icon.png" #optional
 
 # A text field displayed in the mod UI
 #credits="" #optional
@@ -86,6 +86,38 @@ Intergrate Tuning Wrench with FTBUltimine
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="${minecraft_version_range}"
     ordering="NONE"
+    side="BOTH"
+
+# 1. Create Mod Dependency
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.10,)" 
+    ordering="AFTER"        
+    side="BOTH"
+
+# 2. Create: Sound of Steam Dependency
+[[dependencies.${mod_id}]]
+    modId="pipeorgans"
+    type="required"
+    versionRange="[0.8.2,)"
+    ordering="AFTER"        
+    side="BOTH"
+
+# 3. Create: Sound of Steam: Tuning Wrench Dependency
+[[dependencies.${mod_id}]]
+    modId="tuningwrench"
+    type="required"
+    versionRange="[1.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# 4. FTB Ultimine Dependency
+[[dependencies.${mod_id}]]
+    modId="ftbultimine"
+    type="required"
+    versionRange="[2101.0,)"
+    ordering="AFTER"
     side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
