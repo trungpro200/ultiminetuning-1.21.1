@@ -1,25 +1,32 @@
+# UltimineTuning
 
-Installation information
-=======
+An automation addon for NeoForge 1.21.1 that integrates **Tuning Wrench** with the **FTB Ultimine API** to mass-configure redstone networks in a single click.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## 🔍 The Problem & Solution
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+* **The Problem:** In *Create: Sound of Steam*, setting up complex redstone links manually is incredibly tedious. The *Tuning Wrench* mod solved this by letting you configure individual links in a single click. However, if you have a massive network of interconnected pipes, you still have to manually run down the line and click every single block one-by-one.
+* **The Solution:** **UltimineTuning** bridges the gap. By leveraging the FTB Ultimine API, you can now hold your Ultimine key, click a single pipe block with your Tuning Wrench, and instantly tune the entire chain at once. 
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## 🛠️ Requirements & Dependencies
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+This mod functions as an extension and requires the following mods to be installed:
+* **NeoForge** (1.21.1)
+* [Create](https://modrinth.com/mod/create)
+* [Create: Sound of Steam](https://modrinth.com/mod/create-sound-of-steam)
+* [Create: Sound of Steam: Tuning Wrench](https://modrinth.com/mod/create-sound-of-steam-tuning-wrench)
+* [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## 🚀 Features
+
+* **Chain-Tuning:** Holds the FTB Ultimine shape/chain key to apply wrench frequencies across all connected compatible blocks instantly.
+* **Chain-Modification:** Hold your FTB Ultimine shape/chain key while holding a different pipe variant to swap the pipe type for the entire connected network at once.
+* **Time Saver:** Cuts down the setup time for massive steam or piping networks from minutes to a single second.
+* **Smart Filtering:** Utilizes FTB Ultimine's logical block matching to ensure you only tune the relevant blocks you intend to configure.
+
+## 📜 Credits & License
+
+* **Code & Concept:** Developed by trungpro200.
+* **Logo Artwork:** The project logo is a modified variation of the official *Create: Sound of Steam: Tuning Wrench* artwork, adjusted under the terms of the MIT License.
+* **License:** This mod's source code is distributed under the **MIT License**. 
+
+*Disclaimer: This is an unofficial third-party addon extension and is not directly affiliated with the official Create, FTB, or Sound of Steam development teams.*
