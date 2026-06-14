@@ -84,9 +84,7 @@ public enum UltimineTuningHandler implements RightClickHandler {
                 
             }
         }
-
-        // Return total blocks processed so Ultimine animations and durabilities
-        // subtract correctly
+        //Mainly used for pipe consumption
         return blocksTuned;
     }
 }
