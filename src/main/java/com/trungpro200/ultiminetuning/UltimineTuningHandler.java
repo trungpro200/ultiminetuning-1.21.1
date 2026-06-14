@@ -5,7 +5,7 @@ import dev.ftb.mods.ftbultimine.api.rightclick.RightClickHandler;
 import dev.ftb.mods.ftbultimine.api.shape.ShapeContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -39,7 +39,7 @@ public enum UltimineTuningHandler implements RightClickHandler {
         ItemStack heldItem = player.getItemInHand(hand);
 
         // 1. Ignore if the player isn't using the Tuning Wrench
-        if (!(heldItem.getItem() instanceof TunersWrenchItem wrench) && !(heldItem.getItem().getDescriptionId().contains("block.pipeorgans"))) {
+        if (!(heldItem.getItem() instanceof TunersWrenchItem) && !(heldItem.getItem().getDescriptionId().contains("block.pipeorgans"))) {
             return 0; // Return 0 blocks handled
         }
 
@@ -74,8 +74,9 @@ public enum UltimineTuningHandler implements RightClickHandler {
                         )
                     );
                     blocksTuned++;
+                // If player holding organpipes
                 } else {
-                    InteractionResult result = pipeBlock.substitutePipe(state, level, pos, heldItem, player);
+                    ItemInteractionResult result = pipeBlock.useItemOn(heldItem, state, level, pos, player, hand, fakeHit);
                     if (result.consumesAction()) {
                         blocksTuned++;
                     }
