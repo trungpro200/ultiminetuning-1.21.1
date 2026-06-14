@@ -1,0 +1,13 @@
+{
+  "itemGroup.ultiminetuning": "Example Mod Tab",
+  "block.ultiminetuning.example_block": "Example Block",
+  "item.ultiminetuning.example_item": "Example Item",
+
+  "ultiminetuning.configuration.title": "UltimineTuning Configs",
+  "ultiminetuning.configuration.section.ultiminetuning.common.toml": "UltimineTuning Configs",
+  "ultiminetuning.configuration.section.ultiminetuning.common.toml.title": "UltimineTuning Configs",
+  "ultiminetuning.configuration.items": "Item List",
+  "ultiminetuning.configuration.logDirtBlock": "Log Dirt Block",
+  "ultiminetuning.configuration.magicNumberIntroduction": "Magic Number Text",
+  "ultiminetuning.configuration.magicNumber": "Magic Number"
+}
